@@ -25,6 +25,28 @@ class Calc(Compf):
     def compile(self, str):
         Compf.compile(self, str)
         return self.r.top()
+    
+    def process_symbol(self, c):
+        if c == "(":
+            self.s.push(c)
+        elif c == ")":
+            self.process_suspended_operators(c)
+            self.s.pop()
+        elif c in "+-*/":
+            self.process_suspended_operators(c)
+            self.s.push(c)
+        elif c == "$":
+            self.s.push(c)
+        elif self.s.top() == "$":
+            self.s.pop()
+            self.check_symbol(c)
+            self.process_variable(c)
+        else:
+            self.check_symbol(c)
+            self.process_value(c)
+    
+    def process_variable(self, c):
+        self.r.push(len([int(i) for i in self.r.array if int(i) <= int(c)]))
 
     # Обработка цифры
     def process_value(self, c):
