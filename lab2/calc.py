@@ -20,10 +20,10 @@ class Calc(Compf):
         super().__init__()
         # Создание стека чисел для работы стекового калькулятора
         self.r = Stack()
-        self.a = Stack()
+        self.a = []
     # Интерпретация арифметического выражения
     def compile(self, str):
-        self.a.array.clear()
+        self.a.clear()
         Compf.compile(self, str)
 
         return self.r.top()
@@ -45,11 +45,11 @@ class Calc(Compf):
             self.process_variable(c)
         else:
             self.check_symbol(c)
-            self.a.push(c)
+            self.a.append(c)
             self.process_value(c)
     
     def process_variable(self, c):
-        self.r.push(len([int(i) for i in self.a.array if int(i) <= int(c)]))
+        self.r.push(len([int(i) for i in self.a if int(i) <= int(c)]))
 
     # Обработка цифры
     def process_value(self, c):
