@@ -102,3 +102,9 @@ class TestCalc:
 
     def test_modification5(self):
         assert self.c.compile('1+$2+3+$4+5+$6') == 15
+
+    def test_modification6(self):
+        assert self.c.compile('$2*$2+$2') == 0
+
+    def test_modification7(self):
+        assert self.c.compile('$2*$9*5+1') == 1
