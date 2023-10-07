@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header><h1 class="name">Федоров Алексей Евгеньевич</h1></header>
+    <div class="flex-container">
+        <div class="image">
+            <img style="margin: 5px;" src="shtein.jpeg">
+        </div>
+        <div >
+            <h2>О себе</h2>
+            <p class="about">
+            Я студент 4-го курса МИФИ. Обучаюсь в мифи на специальности "Информационная безопасность"<br><br>
+            Увлекаюсь работой, игрульками, воллеболом и едой<br>
+            </p>
+            <a class="my_page" href="https://github.com/ullibniss">Моя страница</a>
+            <h2>Дисциплины</h2>
+            Вот некоторые изученные мною курсы:<br>
+            <table>
+                <thead>
+                    <tr>
+                        <th><b>Название Дисциплины</b></th>
+                        <th><b>Форма промещуточного контроля</b></th>
+                        <th><b>Семестр</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="3"><b>Обязательные дисциплины</b></th>
+                    </tr>
+                    <tr>
+                        <td>Компьютерные сети</td>
+                        <td>Экзамен</td>
+                        <td>Весна 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Низкоуровневое программирование</td>
+                        <td>Зачет</td>
+                        <td>Весна 2021</td>
+                    </tr>
+                    <tr>
+                        <td>Безопасность операционных систем</td>
+                        <td>Экзамен</td>
+                        <td>Весна 2023</td>
+                    </tr>
+                    <tr>
+                        <td>АИСД</td>
+                        <td>Экзамен</td>
+                        <td>Весна 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Основы ООП</td>
+                        <td>Экзамен</td>
+                        <td>Осень 2020</td>
+                    </tr>
+                    <tr>
+                        <th colspan="3"><b>Дисциплины по выбору</b></th>
+                    </tr>
+                    <tr>
+                        <td>ПАРВПО</td>
+                        <td>Экзамен</td>
+                        <td>Весна 2023</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>Свяжитесь со мной</h2>
+            <form>
+                <label for="name">Ваше имя</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Ваш адрес электронной почты</label>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="message">Сообщение для меня</label><br>
+                <textarea name="message" cols="40" rows="3"></textarea><br><br>
+                <label for="type">Тип обращения</label>
+                <select name="type" id="type">
+                    <option value="offer">Предложение</option>
+                    <option value="notification">Уведомление</option>
+                    <option value="alert">Замечание</option>
+                </select><br><br>
+                <label for="score">Как тебе сайт?</label><br>
+                <input type="range" id="score" name="score" min="0" max="10" /><br><br>
+                <label for="visit_again">Посетишь сайт снова?</label><br>
+                <input type="radio" id="visit_again_1" name="visit_again" value="yes" />
+                <label for="visit_again_1">Конечно, Да</label><br>
+
+                <input type="radio" id="visit_again_2" name="visit_again" value="maybe" />
+                <label for="visit_again_2">Возможно</label><br>
+        
+                <input type="radio" id="visit_again_3" name="visit_again" value="no" />
+                <label for="visit_again_3">Ни за что</label><br>
+                <input type="submit" value="Отправить сообщение" /><br>
+            </form>
+        </div>
+    </div>
+    <footer id="footer">
+        Работу выполнил Федоров А. Е.<br>
+        <i>7 октября 2023 г.</i>
+    </footer>
+</body>
